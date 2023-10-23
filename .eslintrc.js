@@ -5,7 +5,10 @@ module.exports = {
 	  // eslint-disable-next-line no-mixed-spaces-and-tabs
 	  node: true,
   },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  extends: [
+    'eslint:recommended',
+	  'plugin:@typescript-eslint/recommended'
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -17,6 +20,7 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+	  "i18next"
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -35,6 +39,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
 	  'no-mixed-spaces-and-tabs': 'off',
+	  "i18next/no-literal-string": ['error', {markupOnly: true}],
   },
   globals: {
     __IS_DEV__: true,
