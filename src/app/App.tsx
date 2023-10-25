@@ -5,21 +5,21 @@ import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { SideBar } from 'widgets/SideBar';
 import './styles/index.scss';
+import PageLoader from "shared/ui/PageLoader/PageLoader";
 
 const App = () => {
-    const { theme } = useTheme();
-    return (
-        <Suspense fallback="">
-            <div className={classNames('app', {}, [theme])}>
-                <Navbar />
-                <div className="content-page">
-                    <SideBar />
-                    <AppRouter />
-                </div>
-            </div>
-        </Suspense>
-
-    );
+  const { theme } = useTheme();
+  return (
+    <Suspense fallback={<PageLoader/>}>
+      <div className={classNames('app', {}, [theme])}>
+        <Navbar />
+        <div className="content-page">
+          <SideBar />
+          <AppRouter />
+        </div>
+      </div>
+    </Suspense>
+  );
 };
 
 export default App;
