@@ -7,7 +7,7 @@ export enum ThemeButton{
 }
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   className?: string;
-  theme: ThemeButton;
+  theme?: ThemeButton;
 }
 
 const Button: FC<ButtonProps> = (props) => {
@@ -15,7 +15,11 @@ const Button: FC<ButtonProps> = (props) => {
   return (
     <button
       type='button'
-      className={classNames(cls.Button , {}, [className, cls[theme]])} {...otherProps}>
+      className={
+        classNames(cls.Button,
+          {},
+          [className, cls[theme]])}
+      {...otherProps}>
       {children}
     </button>
   );
