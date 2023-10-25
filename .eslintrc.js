@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
 	  // eslint-disable-next-line no-mixed-spaces-and-tabs
 	  node: true,
+	  jest: true,
   },
   extends: [
     'eslint:recommended',
