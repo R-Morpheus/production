@@ -16,12 +16,12 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "NodeNext"
+      "module": "CommonJS"
     }
   },
   "include": [
     "./config/jest/setupTests.ts",
     "./src/**/*.ts",
-    "./src/**/*.tsx"
+    "./src/**/*.tsx",
   ]
 }
