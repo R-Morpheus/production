@@ -6,6 +6,12 @@
   top: 0;
   z-index: -1;
   pointer-events: none;
+  color: var(--primary-color);
+}
+
+.Modal.dark {
+  --bg-color: #090949;
+  --primary-color: #04ff04;
 }
 
 .overlay {
@@ -33,5 +39,11 @@
 
   .content {
     transform: scale(1);
+  }
+}
+
+.isClosing {
+  .content {
+    transform: scale(0.2);
   }
 }
