@@ -37,7 +37,6 @@ jobs:
       - name: build storybook
         run: npm run storybook:build
 
-#       NOT WORKING WITH CHROME.APP
       - name: screenshot testing
         run: npm run test:ui:ci
 
